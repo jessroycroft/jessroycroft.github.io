@@ -30,12 +30,10 @@ main {
     display: flex;
     flex-direction: column;
     align-self: center;
-    /* margin: 0 auto; */
-    /* align-self: center; */
 }
 
 main p {
-    padding-top: 50px;
+    padding-top: 20px;
 }
 
 main ul {
@@ -81,6 +79,6 @@ main li {
 @media only screen and (min-width: 981px) {
     main {
         position: relative;
-        top: 117px;
+        top: 102px;
     }
 }
