@@ -49,9 +49,6 @@ main li {
 }
 
 @media only screen and (max-width: 980px) {
-    .name-container {
-        text-align: center;
-    }
     .container {
         display: block;
         width: 70%;
@@ -66,11 +63,8 @@ main li {
 
     h1 {
         transform: rotate(0deg);
-        letter-spacing: 15px;
-    }
-    span.roft {
-        width: 100%;
-        display: inline-block; 
+        letter-spacing: normal;
+        font-size: 70px;
     }
 
     main ul {
@@ -79,14 +73,22 @@ main li {
 
 }
 
-@media only screen and (max-width: 419px) {
-
+@media only screen and (max-width: 530px) {
     h1 {
-        letter-spacing: initial;
+        font-size: 80px;
+        letter-spacing: 15px;
+    }
+
+    span.roft {
+        width: 100%;
+        display: inline-block; 
     }
 }
 
 @media only screen and (min-width: 981px) {
+    body {
+        padding-bottom: 35px;
+    }
     .name-container {
         position: relative;
         left: 40px;
@@ -102,8 +104,4 @@ main li {
     main ul {
         padding-top: 20px;
     }
-}
-
-@media only screen and (min-width: 1210px) {
-
 }
