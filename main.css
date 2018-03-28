@@ -49,9 +49,12 @@ main li {
 }
 
 @media only screen and (max-width: 980px) {
+    .name-container {
+        text-align: center;
+    }
     .container {
         display: block;
-        width: 60%;
+        width: 70%;
         margin: 0 auto;
         height: auto;
         padding: 25px 0;
@@ -77,13 +80,7 @@ main li {
 }
 
 @media only screen and (max-width: 419px) {
-    .name-container {
-        padding-top: 65px;
-    }
 
-    main {
-        top: 65px;      
-    }
     h1 {
         letter-spacing: initial;
     }
