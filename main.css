@@ -77,8 +77,23 @@ main li {
 }
 
 @media only screen and (min-width: 981px) {
+    .name-container {
+        position: relative;
+        left: 40px;
+    }
+    h1 {
+        font-size: 100px;
+    }
     main {
         position: relative;
-        top: 102px;
+        top: 80px;
     }
+
+    main ul {
+        padding-top: 20px;
+    }
+}
+
+@media only screen and (min-width: 1210px) {
+
 }
