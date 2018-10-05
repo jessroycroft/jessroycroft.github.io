@@ -4,42 +4,45 @@ const app = {};
 
 const canvas = document.querySelector('#draw');
 const ctx = canvas.getContext('2d');
+
+let hue = document.querySelector('input:checked').value;
+
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
-ctx.strokeStyle = '#bada55';
+ctx.strokeStyle = hue;
 ctx.lineJoin = 'round';
 ctx.lineCap = 'round';
-ctx.lineWidth = 20;
+ctx.lineWidth = 10;
 
 let isDrawing = false;
 let lastX = 0;
 let lastY = 0;
-let hue = 0;
+const fieldset = document.querySelector('fieldset');
 let direction = true;
 
 app.konamiCode = () => {
     document.addEventListener('keyup', e => {
-        if (e.keyCode === 13) {
+        if (e.code === 'Enter') {
             document.querySelector('.container').classList.add('hide');
-            document.getElementById('ms-paint-clone').classList.remove('hide');
+            document.getElementById('paint-container').classList.remove('hide');
             
         }
-        if (e.keyCode === 27) {
+        if (e.code === 'Escape') {
             document.querySelector('.container').classList.remove('hide');
-            document.getElementById('ms-paint-clone').classList.add('hide'); 
+            document.getElementById('paint-container').classList.add('hide'); 
         }
     })
 }
 
 app.clearCanvas = e => {
-    if (e.keyCode === 32) {
+    if (e.code === 'KeyZ' && (e.metaKey || e.ctrlKey)){
         ctx.clearRect(0, 0, canvas.width, canvas.height);
     };
 }
 
 app.draw = e => {
     if (!isDrawing) return; //stop the function from running when they are not moused down
-    ctx.strokeStyle = `hsl(${hue}, 100%, 50%`;
+    ctx.strokeStyle = hue;
     ctx.beginPath();
     // start from:
     ctx.moveTo(lastX, lastY);
@@ -49,7 +52,10 @@ app.draw = e => {
     [lastX, lastY] = [e.offsetX, e.offsetY];
 }
 
-app.addCanvasEventListeners = () => {
+app.addEventListeners = () => {
+    fieldset.addEventListener('change', () => {
+      hue = document.querySelector('input:checked').value;
+    });
     canvas.addEventListener('mousedown', (e) => {
         isDrawing = true;
         [lastX, lastY] = [e.offsetX, e.offsetY];
@@ -61,7 +67,7 @@ app.addCanvasEventListeners = () => {
 }
 
 app.init = () => {
-    app.addCanvasEventListeners();
+    app.addEventListeners();
     app.konamiCode();
 }
 

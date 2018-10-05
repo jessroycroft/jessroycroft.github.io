@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta id="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>jess roycroft | alive human</title>
     <link href="https://fonts.googleapis.com/css?family=Fira+Mono" rel="stylesheet">
@@ -22,7 +22,7 @@
             <p>thanks for stopping by ily.</p>
             <ul>
                 <li>
-                    <a class="test-link" href="//github.com/jessroycroft">github</a>
+                    <a href="//github.com/jessroycroft">github</a>
                 </li>
                 <li>
                     <a href="//linkedin.com/in/jessroycroft">linkedin</a>
@@ -34,7 +34,60 @@
             <p>get in touch at jessroycroft[at]gmail.com</p>
         </main>
     </div>
-    <div id="ms-paint-clone" class="hide">
+    <div id="paint-container" class="hide">
+        <section id="color-picker">
+            <fieldset>
+                <legend>Color picker:</legend>
+                <label for="black">Black</label>
+                <input type="radio" name="colours" id="black" value="#000" checked>
+                <label for="white">White</label>
+                <input type="radio" name="colours" id="white" value="#fff">
+                <label for="dark-grey">Dark Grey</label>
+                <input type="radio" name="colours" id="dark-grey" value="#70757A">
+                <label for="light-grey">Light Grey</label>
+                <input type="radio" name="colours" id="light-grey" value="#9A9DA0">
+                <label for="dark-red">Dark Red</label>
+                <input type="radio" name="colours" id="dark-red" value="#781B1E">
+                <label for="light-red">Light Red</label>
+                <input type="radio" name="colours" id="light-red" value="#CC0000">
+                <label for="dark-yellow">Dark Yellow</label>
+                <input type="radio" name="colours" id="dark-yellow" value="#3C4043">
+                <label for="light-yellow">Light Yellow</label>
+                <input type="radio" name="colours" id="light-yellow" value="#FFFF00">
+                <label for="dark-green">Dark Green</label>
+                <input type="radio" name="colours" id="dark-green" value="#527872">
+                <label for="light-green">Light Green</label>
+                <input type="radio" name="colours" id="light-green" value="#00CC00">
+                <label for="dark-teal">Dark Teal</label>
+                <input type="radio" name="colours" id="dark-teal" value="#205D80">
+                <label for="teal">Teal</label>
+                <input type="radio" name="colours" id="teal" value="#32FCF9">
+                <label for="dark-blue">Dark Blue</label>
+                <input type="radio" name="colours" id="dark-blue" value="#1A0DAB">
+                <label for="royal-blue">Royal Blue</label>
+                <input type="radio" name="colours" id="royal-blue" value="#0000FF">
+                <label for="dark-pink">Dark Pink</label>
+                <input type="radio" name="colours" id="dark-pink" value="#762CA7">
+                <label for="pink">Pink</label>
+                <input type="radio" name="colours" id="pink" value="#FF98BF">
+                <label for="grey">Grey</label>
+                <input type="radio" name="colours" id="grey" value="#70757A">
+                <label for="pale-yellow">Pale Yellow</label>
+                <input type="radio" name="colours" id="pale-yellow" value="#F8F845">
+                <label for="dark-blue2">Dark Blue 2</label>
+                <input type="radio" name="colours" id="dark-blue2" value="#0000FF">
+                <label for="purple">Purple</label>
+                <input type="radio" name="colours" id="purple" value="#604DC0">
+                <label for="dark-purple">Dark Purple</label>
+                <input type="radio" name="colours" id="dark-purple" value="#2518B5">
+                <label for="hot-pink">Hot Pink</label>
+                <input type="radio" name="colours" id="hot-pink" value="#FF69B4">
+                <label for="brown">Brown</label>
+                <input type="radio" name="colours" id="brown" value="#804D1A">
+                <label for="orange">Orange</label>
+                <input type="radio" name="colours" id="orange" value="#FB940B">
+            </fieldset>
+        </section>
         <canvas id="draw" width="800" height="800"></canvas>
     </div>
         
