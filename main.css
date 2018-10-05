@@ -48,6 +48,10 @@ main li {
     list-style-type: none;
 }
 
+.hide {
+    display: none;
+}
+
 @media only screen and (max-width: 980px) {
     .container {
         display: block;
