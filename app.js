@@ -54,7 +54,17 @@ app.draw = e => {
 
 app.addEventListeners = () => {
     fieldset.addEventListener('change', () => {
-      hue = document.querySelector('input:checked').value;
+        const focusedColourBoxes = document.querySelectorAll('.focused');
+        focusedColourBoxes.forEach(box => {
+            box.classList.remove('focused');
+        })
+        
+        const checkedInput = document.querySelector('input:checked');
+        const checkedColourBox = document.querySelector(`label[for="${checkedInput.getAttribute('id')}"] .colour-box`);
+        checkedColourBox.classList.add('focused');
+        hue = checkedInput.value;
+        document.query
+        document.getElementById('selected-colour').style.backgroundColor = hue;
     });
     canvas.addEventListener('mousedown', (e) => {
         isDrawing = true;
@@ -66,7 +76,18 @@ app.addEventListeners = () => {
     window.addEventListener('keydown', app.clearCanvas);
 }
 
+app.fillColourBoxes = () => {
+    const radioButtons = document.querySelectorAll('input[type=radio');
+    const colourBoxes = document.querySelectorAll('.colour-box:not(#selected-colour)');
+    colourBoxes.forEach(box => {
+        const id = box.parentNode.getAttribute('for');
+        const colour = document.getElementById(id).value;
+        box.style.backgroundColor = colour;
+    })
+}
+
 app.init = () => {
+    app.fillColourBoxes();
     app.addEventListeners();
     app.konamiCode();
 }

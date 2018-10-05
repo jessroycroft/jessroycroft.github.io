@@ -52,6 +52,27 @@ main li {
     display: none;
 }
 
+input[type="radio"], .label-text {
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    position: absolute;
+    left: -10000px;
+    top: auto;
+}
+
+.colour-box {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border: 1px solid black;
+}
+
+.colour-box.focused {
+    outline: 1px dotted #212121;
+    outline: 5px auto -webkit-focus-ring-color;
+}
+
 @media only screen and (max-width: 980px) {
     .container {
         display: block;
