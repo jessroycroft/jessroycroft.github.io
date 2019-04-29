@@ -10,6 +10,8 @@ h1, p {
 .container {
     display: flex;
     height: 100vh;
+    max-width: 1500px;
+    padding-right: 5%;
 }
 .name-container {
     width: 29%;
